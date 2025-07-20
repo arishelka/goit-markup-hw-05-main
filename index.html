@@ -388,8 +388,9 @@
             <div class="footer__form">
                 <p class="footer__caption">Subscribe</p>
                 <form class="subscribe__form" action="#">
-                    <label for="subscribe">
-                        <input type="text" id="subscribe" name="subscribe" class="footer__comment" placeholder="E-mail">
+                    <label class="email__label" for="subscribe">
+                        <input type="email" id="subscribe" name="subscribe" class="footer__comment"
+                            placeholder="E-mail">
                     </label>
 
                     <button class="footer__button" type="submit">
@@ -398,9 +399,8 @@
                             <use href="./images/icons.svg#icon-telegram"></use>
                         </svg>
                     </button>
+                </form>
             </div>
-            </form>
-        </div>
         </div>
     </footer>
 
@@ -445,7 +445,7 @@
                         </svg>
                     </div>
 
-                    <label class="form__label" for="comment">
+                    <label class="form__label" for="user-comment">
                         Comment
                     </label>
                     <div class="form__icons">
@@ -469,12 +469,6 @@
             </form>
         </div>
     </div>
-
-
-    </form>
-    </div>
-    </div>
-
     <script src="js/modal.js"></script>
 </body>
 
