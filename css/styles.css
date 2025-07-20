@@ -603,9 +603,9 @@ img {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #fff;
+    color: #ffffff;
     margin-left: 80px;
     margin-bottom: 16px;
 
@@ -616,7 +616,7 @@ img {
     border-radius: 4px;
     width: 264px;
     height: 40px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 4px 0 rgba(31, 10, 10, 0.15);
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 12px;
@@ -638,10 +638,6 @@ img {
     color: var(--white);
 }
 
-.footer__btns {
-    position: relative;
-}
-
 .subscribe__icon {
     position: absolute;
     top: 50%;
@@ -659,27 +655,35 @@ img {
 
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     display: flex;
     margin-left: 24px;
-    border: 0;
+    border: none;
     gap: 16px;
     justify-self: space-between;
-
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
 }
 
 .footer__icon {
     fill: #f4f4fd;
+    margin-left: 16px;
 
+}
+
+.subcribe__form {
+    display: flex;
+    gap: 24px;
 }
 
 .backdrop {
@@ -708,7 +712,7 @@ img {
 }
 
 .modal {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
 
@@ -729,22 +733,23 @@ img {
     transform: translate(-50%, -100%);
 }
 
+.modal {
+    padding: 72px 24px 24px 24px;
+}
+
 .modal-close-btn {
     position: absolute;
     display: flex;
     border-radius: 50%;
     fill: #e7e9fc;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
     top: 24px;
     right: 24px;
-    border: 1px solid #D0D2E3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
     width: 24px;
     height: 24px;
     align-items: center;
     justify-content: center;
-    min-width: 165px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -759,7 +764,12 @@ img {
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 
 .modal-close-btn:hover {
     background-color: #404bbf;
@@ -774,11 +784,16 @@ img {
 }
 
 .close__icon {
-    fill: #2e2f42;
-    /* position: absolute;
-    padding: 8px;
-    display: flex; */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.close__icon:hover {
+    fill: #ffffff;
+}
+
+.close__icon:focus {
+    fill: #ffffff;
 }
 
 .modal__text {
@@ -792,6 +807,7 @@ img {
     display: flex;
     padding: 72px 24px 16px;
     justify-content: center;
+    margin-bottom: 16px;
 }
 
 .form {
@@ -804,8 +820,18 @@ img {
     padding: 0px 24px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 8px;
 
 
+}
+
+.form__label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: block;
+    margin-bottom: 4px;
 }
 
 .form__title {
@@ -820,10 +846,15 @@ img {
 
 }
 
+.form__icons {
+    position: relative;
+
+}
+
 .form__space {
-    border: 1px solid #ffffff;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 264px;
+    width: 100%;
     height: 40px;
     margin-bottom: 8px;
     background-color: transparent;
@@ -832,18 +863,14 @@ img {
     letter-spacing: 0.04em;
     padding-left: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    color: #ffffff
-}
-
-
-
-
-.form__space:hover {
-    border: 1px solid #404bbf;
+    color: #ffffff;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__comment:focus {
-    border: 1px solid #404bbf;
+    border-color: #4D5AE5;
 }
 
 .form__comment {
@@ -862,12 +889,6 @@ img {
 
 }
 
-.modal__input {
-    display: flex;
-    position: relative;
-
-
-}
 
 .modal__icon {
     position: absolute;
@@ -876,6 +897,11 @@ img {
     top: 50%;
     left: 16px;
     z-index: 4;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__icon:focus {
+    fill: #4D5AE5;
 }
 
 .modal__icon:hover {
@@ -884,6 +910,26 @@ img {
 
 .modal__icon:focus {
     color: #4d5ae5;
+}
+
+.form__comment {
+    width: 100%;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 16px;
+    outline: transparent;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__comment:focus {
+    border-color: #4D5AE5;
 }
 
 .form__comment::placeholder {
@@ -895,6 +941,31 @@ img {
     color: rgba(46, 47, 66, 0.4);
     padding: 8px 16px;
 }
+
+
+.form__checkbox {
+    margin-bottom: 24px;
+}
+
+.checkbox {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.checkbox__span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
 
 .checkbox__text {
     font-family: var(--font-family);
@@ -908,7 +979,7 @@ img {
 
 }
 
-.checkbox__text span {
+.checkbox__text {
     color: #4d5ae5;
 }
 
@@ -916,24 +987,33 @@ img {
     color: #404bbf;
 }
 
+.checkbox__span:checked {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+
 .modal__button {
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
+    background-color: #4d5ae5;
     border: none;
-    font-family: var(--font-family);
+    font-family: "Roboto",
+        sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     display: block;
     margin: 0 auto;
-
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: flex-start;
 }
 
 .modal__button:hover {
