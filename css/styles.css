@@ -775,11 +775,21 @@ img {
 
 
 .modal-close-btn:hover {
-    fill: #4D5AE5;
+    background-color: #404bbf;
+    border: none;
 }
 
 .modal-close-btn:focus {
-    fill: #4D5AE5;
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close-btn:focus {
+    fill: #ffffff;
+}
+
+.modal-close-btn:hover {
+    fill: #ffffff;
 }
 
 
