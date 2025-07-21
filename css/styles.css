@@ -606,7 +606,6 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-left: 80px;
     margin-bottom: 16px;
 
 }
@@ -623,7 +622,6 @@ img {
     letter-spacing: 0.04em;
     color: #fff;
     background-color: #2e2f42;
-    margin-left: 80px;
     background-color: transparent;
     padding-left: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -648,9 +646,9 @@ img {
 }
 
 .footer__form {
-    display: flex;
     align-items: flex-end;
     gap: 24px;
+    margin-left: 80px;
 }
 
 .footer__button {
@@ -668,9 +666,7 @@ img {
     text-align: center;
     color: #ffffff;
     display: flex;
-    margin-left: 24px;
     border: none;
-    gap: 16px;
     justify-self: space-between;
     justify-content: center;
     align-items: center;
@@ -815,7 +811,6 @@ img {
     text-align: center;
     color: #2e2f42;
     display: flex;
-    padding: 72px 24px 16px;
     justify-content: center;
     margin-bottom: 16px;
 }
@@ -823,15 +818,7 @@ img {
 .form {
     display: flex;
     gap: 24px;
-}
-
-.form__block {
-
-    padding: 0px 24px;
-    display: flex;
     flex-direction: column;
-    margin-bottom: 8px;
-
 }
 
 .form__label {
@@ -879,14 +866,11 @@ img {
 
 }
 
-.form__comment:focus {
-    border-color: #4D5AE5;
-}
-
-.form__space:focus {
+.form__space:focus+.modal__icon {
     border-color: #4D5AE5;
 
 }
+
 
 .form__comment {
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -954,15 +938,21 @@ img {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 12px;
-    line-height: 117%;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
-    padding: 8px 16px;
+
 }
 
 
 .form__checkbox {
     margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+
 }
 
 .checkbox {
@@ -989,10 +979,12 @@ img {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 12px;
-    line-height: 117%;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #4d5ae5;
-    padding: 16px 24px 24px;
+    line-height: 133%;
+    text-decoration: underline;
+
 
 
 }
@@ -1001,14 +993,13 @@ img {
     color: #4d5ae5;
 }
 
-.checkbox:checked {
-    color: #404bbf;
-}
-
 .checkbox__span:checked {
     background-color: #404bbf;
     border: none;
-    fill: #F4F4FD;
+}
+
+.checkbox__icon:checked {
+    fill: #ffffff;
 }
 
 .modal__button {
