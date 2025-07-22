@@ -414,7 +414,7 @@
             <p class="modal__text">Leave your contacts and we will call you back</p>
 
             <form action="#" class="form">
-                <div>
+                <div class="form__block">
                     <label class="form__label" for="user-name">
                         Name
                     </label>
@@ -426,7 +426,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="form__block">
                     <label class="form__label" for="phone">
                         Phone
                     </label>
@@ -438,10 +438,8 @@
                     </div>
                 </div>
 
-                <div>
-                    <label class="form__label" for="email">
-                        E-mail
-                    </label>
+                <div class="form__block">
+                    <label class="form__label" for="email">E-mail</label>
                     <div class="form__icons">
                         <input class="form__space" type="email" id="email" name="userEmail" placeholder="E-mail"
                             required>
@@ -451,14 +449,12 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="form__block-comment">
                     <label class="form__label" for="user-comment">
                         Comment
                     </label>
-                    <div class="form__icons">
-                        <textarea class="form__comment" id="user-comment" name="user-comment" maxlength="300"
-                            placeholder="Text input"></textarea>
-                    </div>
+                    <textarea class="form__comment" id="user-comment" name="user-comment" maxlength="300"
+                        placeholder="Text input"></textarea>
                 </div>
 
                 <div class="form__checkbox">
@@ -469,9 +465,10 @@
                                 <use href="./images/icons.svg#icon-checkmark"></use>
                             </svg>
                         </span>
+                        I accept the terms and conditions of the
+                        <a class="checkbox__text" href="#">Privacy
+                            Policy</a>
                     </label>
-                    I accept the terms and conditions of the
-                    <a class="checkbox__text" href="#">Privacy Policy</a>
                 </div>
                 <button class="modal__button" type="button">Send</button>
             </form>
