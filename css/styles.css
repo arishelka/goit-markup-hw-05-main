@@ -996,7 +996,7 @@ img {
 }
 
 
-input[type="checkbox"]+.checkbox>.checkbox__span {
+input[type="checkbox"]:checked+.checkbox>.checkbox__span {
     background-color: #404bbf;
     border: none;
     fill: #ffffff;
