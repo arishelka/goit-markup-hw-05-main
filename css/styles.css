@@ -867,10 +867,12 @@ img {
 }
 
 .form__space:focus+.modal__icon {
-    border-color: #4D5AE5;
-
+    fill: #4D5AE5;
 }
 
+.form__space:focus {
+    border-color: #4D5AE5;
+}
 
 .form__comment {
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -993,13 +995,15 @@ img {
     color: #4d5ae5;
 }
 
-.checkbox__span:checked {
+
+input[type="checkbox"]+.checkbox>.checkbox__span {
     background-color: #404bbf;
     border: none;
+    fill: #ffffff;
 }
 
-.checkbox__icon:checked {
-    fill: #ffffff;
+.checkbox__span {
+    fill: transparent;
 }
 
 .modal__button {
